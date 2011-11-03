@@ -1,0 +1,19 @@
+C:\Documents and Settings\Sasha\My Documents\Visual Studio 2008\Projects\InterfaceFoSimulator\InterfaceFoSimulator\bin\Debug\InterfaceFoSimulator.exe
+C:\Documents and Settings\Sasha\My Documents\Visual Studio 2008\Projects\InterfaceFoSimulator\InterfaceFoSimulator\bin\Debug\InterfaceFoSimulator.pdb
+C:\Documents and Settings\Sasha\My Documents\Visual Studio 2008\Projects\InterfaceFoSimulator\InterfaceFoSimulator\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Sasha\My Documents\Visual Studio 2008\Projects\InterfaceFoSimulator\InterfaceFoSimulator\obj\Debug\InterfaceFoSimulator.Form1.resources
+C:\Documents and Settings\Sasha\My Documents\Visual Studio 2008\Projects\InterfaceFoSimulator\InterfaceFoSimulator\obj\Debug\InterfaceFoSimulator.Properties.Resources.resources
+C:\Documents and Settings\Sasha\My Documents\Visual Studio 2008\Projects\InterfaceFoSimulator\InterfaceFoSimulator\obj\Debug\InterfaceFoSimulator.csproj.GenerateResource.Cache
+C:\Documents and Settings\Sasha\My Documents\Visual Studio 2008\Projects\InterfaceFoSimulator\InterfaceFoSimulator\obj\Debug\InterfaceFoSimulator.exe
+C:\Documents and Settings\Sasha\My Documents\Visual Studio 2008\Projects\InterfaceFoSimulator\InterfaceFoSimulator\obj\Debug\InterfaceFoSimulator.pdb
+C:\Documents and Settings\Sasha\My Documents\Visual Studio 2008\Projects\InterfaceFoSimulator\InterfaceFoSimulator\obj\Debug\InterfaceFoSimulator.AddEvent.resources
+C:\Users\Byakuya\Desktop\InterfaceFoSimulator\InterfaceFoSimulator\obj\Debug\InterfaceFoSimulator.exe
+C:\Users\Byakuya\Desktop\InterfaceFoSimulator\InterfaceFoSimulator\obj\Debug\InterfaceFoSimulator.pdb
+C:\Users\Byakuya\Desktop\InterfaceFoSimulator\InterfaceFoSimulator\bin\Debug\InterfaceFoSimulator.exe
+C:\Users\Byakuya\Desktop\InterfaceFoSimulator\InterfaceFoSimulator\bin\Debug\InterfaceFoSimulator.pdb
+C:\Users\Byakuya\Desktop\InterfaceFoSimulator\InterfaceFoSimulator\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Byakuya\Desktop\InterfaceFoSimulator\InterfaceFoSimulator\obj\Debug\InterfaceFoSimulator.AddEvent.resources
+C:\Users\Byakuya\Desktop\InterfaceFoSimulator\InterfaceFoSimulator\obj\Debug\InterfaceFoSimulator.Form1.resources
+C:\Users\Byakuya\Desktop\InterfaceFoSimulator\InterfaceFoSimulator\obj\Debug\InterfaceFoSimulator.Properties.Resources.resources
+C:\Users\Byakuya\Desktop\InterfaceFoSimulator\InterfaceFoSimulator\obj\Debug\ResGen.read.1.tlog
+C:\Users\Byakuya\Desktop\InterfaceFoSimulator\InterfaceFoSimulator\obj\Debug\ResGen.write.1.tlog

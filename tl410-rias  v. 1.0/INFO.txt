@@ -1,0 +1,24 @@
+---------------------INFO.TXT------------------------
+
+Conditioner developers:
+ - Vitalij Marynkevych 
+
+
+Configurator developers:
+ - Max Schur
+ - Andrei Kiriyenko
+
+
+Interface developers:
+ - Max Simonov 
+ - Alexander Shemet
+
+
+Loger developers:
+ - Illya Shveda
+ - Vitalij Maruzhenko
+
+
+Obserever developers:
+ - Andrei Alieksieienko
+ - Taras Prokopenko 

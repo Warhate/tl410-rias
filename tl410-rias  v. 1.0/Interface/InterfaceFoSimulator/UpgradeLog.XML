@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="InterfaceFoSimulator">
+</Property><Property Name="Solution File" Value="C:\Users\Byakuya\Desktop\InterfaceFoSimulator\InterfaceFoSimulator.sln">
+</Property><Property Name="User Options File" Value="C:\Users\Byakuya\Desktop\InterfaceFoSimulator\InterfaceFoSimulator.suo">
+</Property><Property Name="Date" Value="23 октября 2011 г.">
+</Property><Property Name="Time" Value="18:02">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="InterfaceFoSimulator.sln" Description="File successfully backed up as C:\Users\Byakuya\Desktop\InterfaceFoSimulator\Backup\InterfaceFoSimulator.sln">
+</Event><Event ErrorLevel="0" Project="" Source="InterfaceFoSimulator.suo" Description="File successfully backed up as C:\Users\Byakuya\Desktop\InterfaceFoSimulator\Backup\InterfaceFoSimulator.suo">
+</Event><Event ErrorLevel="0" Project="InterfaceFoSimulator" Source="InterfaceFoSimulator\InterfaceFoSimulator.csproj" Description="Project file successfully backed up as C:\Users\Byakuya\Desktop\InterfaceFoSimulator\Backup\InterfaceFoSimulator\InterfaceFoSimulator.csproj">
+</Event><Event ErrorLevel="0" Project="InterfaceFoSimulator" Source="InterfaceFoSimulator\AddEvent.cs" Description="File successfully backed up as C:\Users\Byakuya\Desktop\InterfaceFoSimulator\Backup\InterfaceFoSimulator\AddEvent.cs">
+</Event><Event ErrorLevel="0" Project="InterfaceFoSimulator" Source="InterfaceFoSimulator\AddEvent.Designer.cs" Description="File successfully backed up as C:\Users\Byakuya\Desktop\InterfaceFoSimulator\Backup\InterfaceFoSimulator\AddEvent.Designer.cs">
+</Event><Event ErrorLevel="0" Project="InterfaceFoSimulator" Source="InterfaceFoSimulator\Form1.cs" Description="File successfully backed up as C:\Users\Byakuya\Desktop\InterfaceFoSimulator\Backup\InterfaceFoSimulator\Form1.cs">
+</Event><Event ErrorLevel="0" Project="InterfaceFoSimulator" Source="InterfaceFoSimulator\Form1.Designer.cs" Description="File successfully backed up as C:\Users\Byakuya\Desktop\InterfaceFoSimulator\Backup\InterfaceFoSimulator\Form1.Designer.cs">
+</Event><Event ErrorLevel="0" Project="InterfaceFoSimulator" Source="InterfaceFoSimulator\Program.cs" Description="File successfully backed up as C:\Users\Byakuya\Desktop\InterfaceFoSimulator\Backup\InterfaceFoSimulator\Program.cs">
+</Event><Event ErrorLevel="0" Project="InterfaceFoSimulator" Source="InterfaceFoSimulator\Properties\AssemblyInfo.cs" Description="File successfully backed up as C:\Users\Byakuya\Desktop\InterfaceFoSimulator\Backup\InterfaceFoSimulator\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="InterfaceFoSimulator" Source="InterfaceFoSimulator\Properties\Resources.Designer.cs" Description="File successfully backed up as C:\Users\Byakuya\Desktop\InterfaceFoSimulator\Backup\InterfaceFoSimulator\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="InterfaceFoSimulator" Source="InterfaceFoSimulator\Properties\Settings.Designer.cs" Description="File successfully backed up as C:\Users\Byakuya\Desktop\InterfaceFoSimulator\Backup\InterfaceFoSimulator\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="InterfaceFoSimulator" Source="InterfaceFoSimulator\Properties\Settings.settings" Description="File successfully backed up as C:\Users\Byakuya\Desktop\InterfaceFoSimulator\Backup\InterfaceFoSimulator\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="InterfaceFoSimulator" Source="InterfaceFoSimulator\AddEvent.resx" Description="File successfully backed up as C:\Users\Byakuya\Desktop\InterfaceFoSimulator\Backup\InterfaceFoSimulator\AddEvent.resx">
+</Event><Event ErrorLevel="0" Project="InterfaceFoSimulator" Source="InterfaceFoSimulator\Form1.resx" Description="File successfully backed up as C:\Users\Byakuya\Desktop\InterfaceFoSimulator\Backup\InterfaceFoSimulator\Form1.resx">
+</Event><Event ErrorLevel="0" Project="InterfaceFoSimulator" Source="InterfaceFoSimulator\Properties\Resources.resx" Description="File successfully backed up as C:\Users\Byakuya\Desktop\InterfaceFoSimulator\Backup\InterfaceFoSimulator\Properties\Resources.resx">
+</Event><Event ErrorLevel="0" Project="InterfaceFoSimulator" Source="InterfaceFoSimulator\InterfaceFoSimulator.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="InterfaceFoSimulator" Source="InterfaceFoSimulator\InterfaceFoSimulator.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="InterfaceFoSimulator.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="InterfaceFoSimulator.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="InterfaceFoSimulator" Source="InterfaceFoSimulator\InterfaceFoSimulator.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

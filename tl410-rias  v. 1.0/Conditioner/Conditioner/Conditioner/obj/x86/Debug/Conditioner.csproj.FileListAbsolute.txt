@@ -1,0 +1,9 @@
+C:\Users\Byakuya\documents\visual studio 2010\Projects\Conditioner\Conditioner\bin\Debug\Conditioner.exe
+C:\Users\Byakuya\documents\visual studio 2010\Projects\Conditioner\Conditioner\bin\Debug\Conditioner.pdb
+C:\Users\Byakuya\documents\visual studio 2010\Projects\Conditioner\Conditioner\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Byakuya\documents\visual studio 2010\Projects\Conditioner\Conditioner\obj\x86\Debug\Conditioner.Form1.resources
+C:\Users\Byakuya\documents\visual studio 2010\Projects\Conditioner\Conditioner\obj\x86\Debug\Conditioner.Properties.Resources.resources
+C:\Users\Byakuya\documents\visual studio 2010\Projects\Conditioner\Conditioner\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Byakuya\documents\visual studio 2010\Projects\Conditioner\Conditioner\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Byakuya\documents\visual studio 2010\Projects\Conditioner\Conditioner\obj\x86\Debug\Conditioner.exe
+C:\Users\Byakuya\documents\visual studio 2010\Projects\Conditioner\Conditioner\obj\x86\Debug\Conditioner.pdb

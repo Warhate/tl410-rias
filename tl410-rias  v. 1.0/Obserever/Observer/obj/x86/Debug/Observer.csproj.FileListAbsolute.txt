@@ -1,0 +1,18 @@
+c:\users\warh\documents\visual studio 2010\Projects\Observer\Observer\bin\Debug\Observer.exe
+c:\users\warh\documents\visual studio 2010\Projects\Observer\Observer\bin\Debug\Observer.pdb
+c:\users\warh\documents\visual studio 2010\Projects\Observer\Observer\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\warh\documents\visual studio 2010\Projects\Observer\Observer\obj\x86\Debug\Observer.Form1.resources
+c:\users\warh\documents\visual studio 2010\Projects\Observer\Observer\obj\x86\Debug\Observer.Properties.Resources.resources
+c:\users\warh\documents\visual studio 2010\Projects\Observer\Observer\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\users\warh\documents\visual studio 2010\Projects\Observer\Observer\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\users\warh\documents\visual studio 2010\Projects\Observer\Observer\obj\x86\Debug\Observer.exe
+c:\users\warh\documents\visual studio 2010\Projects\Observer\Observer\obj\x86\Debug\Observer.pdb
+F:\share\labs\khomenko\lab3\Observer\Observer\obj\x86\Debug\Observer.exe
+F:\share\labs\khomenko\lab3\Observer\Observer\obj\x86\Debug\Observer.pdb
+F:\share\labs\khomenko\lab3\Observer\Observer\obj\x86\Debug\ResolveAssemblyReference.cache
+F:\share\labs\khomenko\lab3\Observer\Observer\obj\x86\Debug\Observer.Form1.resources
+F:\share\labs\khomenko\lab3\Observer\Observer\obj\x86\Debug\Observer.Properties.Resources.resources
+F:\share\labs\khomenko\lab3\Observer\Observer\obj\x86\Debug\GenerateResource.read.1.tlog
+F:\share\labs\khomenko\lab3\Observer\Observer\obj\x86\Debug\GenerateResource.write.1.tlog
+F:\share\labs\khomenko\lab3\Observer\Observer\bin\Debug\Observer.exe
+F:\share\labs\khomenko\lab3\Observer\Observer\bin\Debug\Observer.pdb

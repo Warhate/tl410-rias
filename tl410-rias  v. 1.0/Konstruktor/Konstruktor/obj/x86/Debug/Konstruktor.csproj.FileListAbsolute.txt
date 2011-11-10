@@ -1,0 +1,18 @@
+c:\users\виталик\documents\visual studio 2010\Projects\Konstruktor\Konstruktor\bin\Debug\Konstruktor.exe
+c:\users\виталик\documents\visual studio 2010\Projects\Konstruktor\Konstruktor\bin\Debug\Konstruktor.pdb
+c:\users\виталик\documents\visual studio 2010\Projects\Konstruktor\Konstruktor\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\виталик\documents\visual studio 2010\Projects\Konstruktor\Konstruktor\obj\x86\Debug\Konstruktor.Properties.Resources.resources
+c:\users\виталик\documents\visual studio 2010\Projects\Konstruktor\Konstruktor\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\users\виталик\documents\visual studio 2010\Projects\Konstruktor\Konstruktor\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\users\виталик\documents\visual studio 2010\Projects\Konstruktor\Konstruktor\obj\x86\Debug\Konstruktor.exe
+c:\users\виталик\documents\visual studio 2010\Projects\Konstruktor\Konstruktor\obj\x86\Debug\Konstruktor.pdb
+c:\users\виталик\documents\visual studio 2010\Projects\Konstruktor\Konstruktor\obj\x86\Debug\Konstruktor.Form1.resources
+C:\Users\Макс\Desktop\Konstruktor\Konstruktor\obj\x86\Debug\Konstruktor.exe
+C:\Users\Макс\Desktop\Konstruktor\Konstruktor\obj\x86\Debug\Konstruktor.pdb
+C:\Users\Макс\Desktop\Konstruktor\Konstruktor\bin\Debug\Konstruktor.exe
+C:\Users\Макс\Desktop\Konstruktor\Konstruktor\bin\Debug\Konstruktor.pdb
+C:\Users\Макс\Desktop\Konstruktor\Konstruktor\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Макс\Desktop\Konstruktor\Konstruktor\obj\x86\Debug\Konstruktor.Form1.resources
+C:\Users\Макс\Desktop\Konstruktor\Konstruktor\obj\x86\Debug\Konstruktor.Properties.Resources.resources
+C:\Users\Макс\Desktop\Konstruktor\Konstruktor\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Макс\Desktop\Konstruktor\Konstruktor\obj\x86\Debug\GenerateResource.write.1.tlog

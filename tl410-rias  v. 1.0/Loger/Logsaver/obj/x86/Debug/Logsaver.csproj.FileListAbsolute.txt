@@ -7,5 +7,5 @@ D:\1Курс 4\Проектний практикум\Проект - журнал
 D:\1Курс 4\Проектний практикум\Проект - журнал\Logsaver\Logsaver\bin\Debug\Logsaver.pdb
 D:\1Курс 4\Проектний практикум\Проект - журнал\Logsaver\Logsaver\obj\x86\Debug\Logsaver.exe
 D:\1Курс 4\Проектний практикум\Проект - журнал\Logsaver\Logsaver\obj\x86\Debug\Logsaver.pdb
-D:\1Курс 4\Проектний практикум\Logsaver_v1\Logsaver\Logsaver\obj\x86\Debug\Logsaver.exe
-D:\1Курс 4\Проектний практикум\Logsaver_v1\Logsaver\Logsaver\obj\x86\Debug\Logsaver.pdb
+D:\1Курс 4\Проектний практикум\Logsaver_v2\Logsaver\obj\x86\Debug\Logsaver.exe
+D:\1Курс 4\Проектний практикум\Logsaver_v2\Logsaver\obj\x86\Debug\Logsaver.pdb

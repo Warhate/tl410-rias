@@ -5,21 +5,47 @@ using System.Text;
 using System.IO;
 namespace Logsaver
 {
-    public abstract class LogStorage
+    public class LogStorage
     {
-        private string Log;
-        public string getLog()
+        string date = " ";
+        List<string> parList = new List<string>();
+        public string getLog(string log)
         {
-            return Log;
+            DateTime dt = DateTime.Now;
+            if (date == dt.ToShortDateString())
+            {  
+                log = "           " + dt.ToLongTimeString() + " " + log + "\r\n";
+            }
+            else
+            {
+                date = dt.ToShortDateString();
+                log = "\r\n" + date + "\r\n" + "           " + dt.ToLongTimeString() + " " + log + "\r\n";
+            }
+            return log;
         }
-        public void setLog(string newLog)
+        public bool checkAddList(string name,string value)
+        {           
+            if (parList.Contains(name+value))
+            {
+                return false;
+            }
+            else
+            {
+                parList.Add(name + value);
+                return true;
+            }
+        }
+        public void saveAll(string name, string value)
         {
-            Log = System.DateTime.Now + " " + newLog + "\r\n";
+            if (checkAddList(name, value))
+            {
+                saveStr(name +" "+ value);
+            }
         }
-        public void saveStr()
+        public void saveStr(string log)
         {
             StreamWriter SW = new StreamWriter(new FileStream("Log.txt", FileMode.Append, FileAccess.Write));
-            SW.Write(getLog());
+            SW.Write(getLog(log));
             SW.Close();
         }
     }

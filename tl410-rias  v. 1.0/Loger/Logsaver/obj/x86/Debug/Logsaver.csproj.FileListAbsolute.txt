@@ -1,0 +1,11 @@
+D:\1Курс 4\Проектний практикум\Проект - журнал\Logsaver\Logsaver\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\1Курс 4\Проектний практикум\Проект - журнал\Logsaver\Logsaver\obj\x86\Debug\Logsaver.Form1.resources
+D:\1Курс 4\Проектний практикум\Проект - журнал\Logsaver\Logsaver\obj\x86\Debug\Logsaver.Properties.Resources.resources
+D:\1Курс 4\Проектний практикум\Проект - журнал\Logsaver\Logsaver\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\1Курс 4\Проектний практикум\Проект - журнал\Logsaver\Logsaver\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\1Курс 4\Проектний практикум\Проект - журнал\Logsaver\Logsaver\bin\Debug\Logsaver.exe
+D:\1Курс 4\Проектний практикум\Проект - журнал\Logsaver\Logsaver\bin\Debug\Logsaver.pdb
+D:\1Курс 4\Проектний практикум\Проект - журнал\Logsaver\Logsaver\obj\x86\Debug\Logsaver.exe
+D:\1Курс 4\Проектний практикум\Проект - журнал\Logsaver\Logsaver\obj\x86\Debug\Logsaver.pdb
+D:\1Курс 4\Проектний практикум\Logsaver_v1\Logsaver\Logsaver\obj\x86\Debug\Logsaver.exe
+D:\1Курс 4\Проектний практикум\Logsaver_v1\Logsaver\Logsaver\obj\x86\Debug\Logsaver.pdb

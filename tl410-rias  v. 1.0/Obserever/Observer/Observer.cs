@@ -12,69 +12,94 @@ namespace Observer
 
     }
 
+    public delegate void EventHandler(String eventName, State eventState);
+
+
+
     public class AviaEvent : Observer
     {
+        public event EventHandler Execute;
+
         string _name;
 
         bool _done = false;
-
-
-        public string Name
-        {
-            get { return _name; }
-            set { _name = value; }
-        }
         private State _state;
+        private State _eventState;
 
-        float _height;
 
-        public float Height
-        {
-            get { return _height; }
-            set { _height = value; }
-        }
-        private TimeSpan _time;
+        //public string Name
+        //{
+        //    get { return _name; }
+        //    set { _name = value; }
+        //}
+        
 
-        public TimeSpan Time
-        {
-            get { return _time; }
-            set { _time = value; }
-        }
-        private float _speed;
+        //float _height;
 
-        public float Speed
-        {
-            get { return _speed; }
-            set { _speed = value; }
-        }
+        //public float Height
+        //{
+        //    get { return _height; }
+        //    set { _height = value; }
+        //}
+        //private TimeSpan _time;
 
-        public AviaEvent(State state, string name)
+        //public TimeSpan Time
+        //{
+        //    get { return _time; }
+        //    set { _time = value; }
+        //}
+        //private float _speed;
+
+        //public float Speed
+        //{
+        //    get { return _speed; }
+        //    set { _speed = value; }
+        //}
+
+        public AviaEvent(State state, string name, State eventState)
         {
             _name = name;
             _state = state;
-        
+            _eventState = eventState;
+            Execute += new EventHandler(AviaEvent_Execute);
+
+
+        }
+
+        void AviaEvent_Execute(string eventName, State eventState)
+        {
+            _done = true;
         }
 
         public override void Update()
         {
             if(!_done)
             {
+                foreach(var param in _eventState.Parameters)
+                {
+                    if(_state.EqualParam(param.Key,param.Value)== EqualState.Equally)
+                    {
+                        Execute(_name, _eventState);
+                    }
 
-            if ((_height - _state.Height) < 3 &&
-                (_height - _state.Height) > -3&&
-                _height!=0.0f)
-            {
-                MessageBox.Show("Подія "+_name +" відбулась");
-            _done = true;
-            }
-            if ((_speed - _state.Speed) < 3 &&
-                (_speed - _state.Speed) > -3&&
-                _speed!=0.0f)
-            {
-                MessageBox.Show("Подія " + _name + " відбулась");
-                _done = true;
+                }
 
-            }
+
+                //if ((_height - _state.Height) < 3 &&
+            //    (_height - _state.Height) > -3&&
+            //    _height!=0.0f)
+            //{
+            //    MessageBox.Show("Подія "+_name +" відбулась");
+            //_done = true;
+            //}
+            //if ((_speed - _state.Speed) < 3 &&
+            //    (_speed - _state.Speed) > -3&&
+            //    _speed!=0.0f)
+            //{
+            //    MessageBox.Show("Подія " + _name + " відбулась");
+            //    _done = true;
+
+            //}
         }
     
         }

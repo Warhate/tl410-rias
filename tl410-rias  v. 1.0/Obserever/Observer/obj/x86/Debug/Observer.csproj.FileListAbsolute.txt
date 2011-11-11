@@ -16,3 +16,12 @@ F:\share\labs\khomenko\lab3\Observer\Observer\obj\x86\Debug\GenerateResource.rea
 F:\share\labs\khomenko\lab3\Observer\Observer\obj\x86\Debug\GenerateResource.write.1.tlog
 F:\share\labs\khomenko\lab3\Observer\Observer\bin\Debug\Observer.exe
 F:\share\labs\khomenko\lab3\Observer\Observer\bin\Debug\Observer.pdb
+d:\Pojects\ObsereverSVN\tl410-rias  v. 1.0\Obserever\Observer\obj\x86\Debug\Observer.exe
+d:\Pojects\ObsereverSVN\tl410-rias  v. 1.0\Obserever\Observer\obj\x86\Debug\Observer.pdb
+d:\Pojects\ObsereverSVN\tl410-rias  v. 1.0\Obserever\Observer\bin\Debug\Observer.exe
+d:\Pojects\ObsereverSVN\tl410-rias  v. 1.0\Obserever\Observer\bin\Debug\Observer.pdb
+d:\Pojects\ObsereverSVN\tl410-rias  v. 1.0\Obserever\Observer\obj\x86\Debug\ResolveAssemblyReference.cache
+d:\Pojects\ObsereverSVN\tl410-rias  v. 1.0\Obserever\Observer\obj\x86\Debug\Observer.Form1.resources
+d:\Pojects\ObsereverSVN\tl410-rias  v. 1.0\Obserever\Observer\obj\x86\Debug\Observer.Properties.Resources.resources
+d:\Pojects\ObsereverSVN\tl410-rias  v. 1.0\Obserever\Observer\obj\x86\Debug\GenerateResource.read.1.tlog
+d:\Pojects\ObsereverSVN\tl410-rias  v. 1.0\Obserever\Observer\obj\x86\Debug\GenerateResource.write.1.tlog

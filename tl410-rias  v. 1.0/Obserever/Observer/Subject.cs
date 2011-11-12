@@ -133,7 +133,7 @@ namespace Observer
                 }
             }
 
-            return EqualState.Equally;
+            return EqualState.NotEqually;
         }
 
 

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +13,13 @@ namespace Observer
 
     }
 
-    public delegate void EventHandler(String eventName, State eventState);
+
+    /// <summary>
+    /// Делегат для собития исполнения собития (как говорит порутчик Ржевский: каламбурчик)
+    /// </summary>
+    /// <param name="eventName">Имя события</param>
+    /// <param name="paramName">Имя параметра из-за каторого это событие произошло</param>
+    public delegate void EventHandler(String eventName, String paramName);
 
 
 
@@ -24,7 +31,7 @@ namespace Observer
 
         bool _done = false;
         private State _state;
-        private State _eventState;
+        private SortedList<String,String> _eventState;
 
 
         //public string Name
@@ -56,17 +63,17 @@ namespace Observer
         //    set { _speed = value; }
         //}
 
-        public AviaEvent(State state, string name, State eventState)
+        public AviaEvent(State state, string name, SortedList<String,String> eventState)
         {
             _name = name;
             _state = state;
             _eventState = eventState;
-            Execute += new EventHandler(AviaEvent_Execute);
+            Execute += AviaEvent_Execute;
 
 
         }
 
-        void AviaEvent_Execute(string eventName, State eventState)
+        void AviaEvent_Execute(string eventName, string paramName)
         {
             _done = true;
         }
@@ -75,11 +82,11 @@ namespace Observer
         {
             if(!_done)
             {
-                foreach(var param in _eventState.Parameters)
+                foreach(var param in _eventState)
                 {
                     if(_state.EqualParam(param.Key,param.Value)== EqualState.Equally)
                     {
-                        Execute(_name, _eventState);
+                        Execute(_name, param.Key);
                     }
 
                 }

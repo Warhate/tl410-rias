@@ -9,17 +9,7 @@ using System.Windows.Forms;
 
 namespace InterfaceFoSimulator
 {
-    public struct Scenary
-    {
-        public String name;
-        public String x1, x2, y1, y2, vaga;
-        public String temp, dav, vla, obl;
-        public String naprav;
-        public String scorost;
-        public List<DataGridViewRow> ListEvents;
-
-    }
-
+    
     public partial class Form1 : Form
     {
         public Form1()
@@ -80,9 +70,9 @@ namespace InterfaceFoSimulator
             this.RemoveButton = new System.Windows.Forms.Button();
             this.AddButton = new System.Windows.Forms.Button();
             this.dataEventsTable = new System.Windows.Forms.DataGridView();
+            this.Closebutton = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Closebutton = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -129,7 +119,7 @@ namespace InterfaceFoSimulator
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(705, 286);
+            this.tabPage1.Size = new System.Drawing.Size(627, 286);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Начальные условия";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -442,7 +432,16 @@ namespace InterfaceFoSimulator
             this.dataEventsTable.Name = "dataEventsTable";
             this.dataEventsTable.Size = new System.Drawing.Size(589, 252);
             this.dataEventsTable.TabIndex = 0;
-            this.dataEventsTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataEventsTable_CellContentClick);
+            // 
+            // Closebutton
+            // 
+            this.Closebutton.Location = new System.Drawing.Point(632, 364);
+            this.Closebutton.Name = "Closebutton";
+            this.Closebutton.Size = new System.Drawing.Size(92, 23);
+            this.Closebutton.TabIndex = 2;
+            this.Closebutton.Text = "ОК";
+            this.Closebutton.UseVisualStyleBackColor = true;
+            this.Closebutton.Click += new System.EventHandler(this.Closebutton_Click);
             // 
             // Column1
             // 
@@ -455,16 +454,6 @@ namespace InterfaceFoSimulator
             this.Column2.HeaderText = "Умова";
             this.Column2.Name = "Column2";
             this.Column2.Width = 150;
-            // 
-            // Closebutton
-            // 
-            this.Closebutton.Location = new System.Drawing.Point(632, 364);
-            this.Closebutton.Name = "Closebutton";
-            this.Closebutton.Size = new System.Drawing.Size(92, 23);
-            this.Closebutton.TabIndex = 2;
-            this.Closebutton.Text = "ОК";
-            this.Closebutton.UseVisualStyleBackColor = true;
-            this.Closebutton.Click += new System.EventHandler(this.Closebutton_Click);
             // 
             // Form1
             // 
@@ -494,13 +483,18 @@ namespace InterfaceFoSimulator
 
         private void AddButton_Click(object sender, EventArgs e)
         {
+            AddEventToTable();
+        }
+
+        private void AddEventToTable()
+        {
             AddEvent newEvent = new AddEvent();
             newEvent.ShowDialog();
 
-            // получаем данные о событии и записываем в таблицу
-            EventData evdata = newEvent.getEventData();
-            if (evdata.name != null)
+            if (newEvent.itsAllOk == true)
             {
+                // получаем данные о событии и записываем в таблицу
+                EventData evdata = newEvent.getEventData();
                 // додаем новые столбцы
                 for (int i = 0; i < evdata.listOfRows.Count; i++)
                 {
@@ -520,99 +514,48 @@ namespace InterfaceFoSimulator
 
                 // заполняем данными
                 this.dataEventsTable.Rows[this.dataEventsTable.RowCount - 2].Cells[0].Value = evdata.name;
-                String Umova = "";
-                for (int i = 0; i < evdata.listOfRows.Count; i++)
-                {
-                    if (evdata.listOfRows[i].Cells[2].Value == null)
-                        Umova = Umova + " " + "'" + evdata.listOfRows[i].Cells[0].Value.ToString() + "' ";
-                    else
-                        Umova = Umova + evdata.listOfRows[i].Cells[2].Value.ToString() + " " + "'" + evdata.listOfRows[i].Cells[0].Value.ToString() + "' ";
-                }
-                String mova = "";
-                for (int i = 0; i < evdata.listOfRows.Count; i++)
-                {
-                    mova += "(";                 
 
-                }
+                String Condition = "";
                 for (int i = 0; i < evdata.listOfRows.Count; i++)
                 {
-                    if (evdata.listOfRows[i].Cells[2].Value == null)
-                    {
-                        mova += repalceTerms(evdata.listOfRows[i].Cells[0].Value.ToString());
-                        mova += "==";
-                        mova += evdata.listOfRows[i].Cells[1].Value.ToString();
-                        mova += ")";
-                    }
-                    else
-                    {
-                        mova += repalceTerms(evdata.listOfRows[i].Cells[2].Value.ToString());
-                        mova += "(";
-                        mova += repalceTerms(evdata.listOfRows[i].Cells[0].Value.ToString());
-                        mova += "==";
-                        mova += evdata.listOfRows[i].Cells[1].Value.ToString();
-                        mova += "))";
-                                          
-                    }
+                    Condition = Condition + "'" + evdata.listOfRows[i].Cells[0].Value.ToString() + "'" + evdata.listOfRows[i].Cells[1].Value.ToString() + evdata.listOfRows[i].Cells[2].Value.ToString();
+                    if (evdata.listOfRows[i].Cells[3].Value != null)
+                        Condition = Condition + " " + evdata.listOfRows[i].Cells[3].Value.ToString() + " ";
                 }
-                MessageBox.Show(mova,evdata.name.ToString());
-                
-                this.dataEventsTable.Rows[this.dataEventsTable.RowCount - 2].Cells[1].Value = Umova;
-                
+                this.dataEventsTable.Rows[this.dataEventsTable.RowCount - 2].Cells[1].Value = Condition;
+
                 for (int i = 0; i < evdata.listOfRows.Count; i++)
                 {
                     if (evdata.listOfRows[i].Cells[1].Value == null)
                         this.dataEventsTable.Rows[this.dataEventsTable.RowCount - 2].Cells[evdata.listOfRows[i].Cells[0].Value.ToString()].Value = "";
                     else
-                        this.dataEventsTable.Rows[this.dataEventsTable.RowCount - 2].Cells[evdata.listOfRows[i].Cells[0].Value.ToString()].Value = evdata.listOfRows[i].Cells[1].Value.ToString();
+                        this.dataEventsTable.Rows[this.dataEventsTable.RowCount - 2].Cells[evdata.listOfRows[i].Cells[0].Value.ToString()].Value = evdata.listOfRows[i].Cells[2].Value.ToString();
                 }
-            }
-            
-            
-        }
-
-        public string repalceTerms(string rusTerm)
-        {
-            switch (rusTerm)
-            {
-                case "Время (мин)": return "time";                   
-                case "Высота (м)": return "hight";                   
-                case "Далность (км)": return "distance";                    
-                case "и": return "&&";                    
-                case "или": return "||";                    
-                default: return "No terms";               
 
             }
         }
-
 
         private void Closebutton_Click(object sender, EventArgs e)
         {
-            // записываем всю информацию в структуру
-            Scenary newScenary = new Scenary();
-            newScenary.name = this.textBox1Name.Text;
-
-            newScenary.x1 = this.textBoxX1.Text;
-            newScenary.x2 = this.textBoxX2.Text;
-            newScenary.y1 = this.textBoxY1.Text;
-            newScenary.y2 = this.textBoxY2.Text;
-            
-            newScenary.temp = this.textBoxTemp.Text;
-            newScenary.dav = this.textBoxDav.Text;
-            newScenary.vla = this.textBoxVla.Text;
-            newScenary.obl = this.textBoxObl.Text;
-
-            newScenary.vaga = this.textBoxMassa.Text;
-            newScenary.naprav = this.comboBoxCourse.Text;
-            newScenary.scorost = this.textBoxSpeed.Text;
-
-            newScenary.ListEvents = new List<DataGridViewRow>();
-            for (int i = 0; i < this.dataEventsTable.Rows.Count-1; i++)
-                newScenary.ListEvents.Add(this.dataEventsTable.Rows[i]);
+            Dictionary<String, String> DicStatScenary = GetStaticOptionsOfScenary();
+            Dictionary<String, String> DicEvents = GetEvents();
 
             // отсылаем структуру дальше "Максу" !!!
             // ...
 
-                this.Close();
+            this.Close();
+        }
+
+        private String RezultCondition(String str)
+        {
+            str = str.Replace(" и ", ")&&(");
+            str = str.Replace(" или ", ")||(");
+            str = str.Replace("'Высота (м)'", "hight");
+            str = str.Replace("'Время (мин)'", "time");
+            str = str.Replace("'Далность (км)'", "distance");
+            str = "(" + str + ")";
+
+            return str;
         }
 
         private void RemoveButton_Click(object sender, EventArgs e)
@@ -629,12 +572,35 @@ namespace InterfaceFoSimulator
             }
         }
 
-        private void dataEventsTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        public Dictionary<String, String> GetEvents()
         {
+            Dictionary<String, String> DictEvents = new Dictionary<string, string>();
 
+            for (int i = 0; i < this.dataEventsTable.Rows.Count - 1; i++)
+                DictEvents.Add(this.dataEventsTable.Rows[i].Cells[0].Value.ToString(), RezultCondition(this.dataEventsTable.Rows[i].Cells[1].Value.ToString()));
+
+
+            return DictEvents;
         }
 
+        public Dictionary<String, String> GetStaticOptionsOfScenary()
+        {
+            Dictionary<String, String> DictEvents = new Dictionary<string, string>();
 
-        
+            DictEvents.Add("name", this.textBox1Name.Text);
+            DictEvents.Add("x1", this.textBoxX1.Text);
+            DictEvents.Add("x2", this.textBoxX2.Text);
+            DictEvents.Add("y1", this.textBoxY1.Text);
+            DictEvents.Add("y2", this.textBoxY2.Text);
+            DictEvents.Add("temp", this.textBoxTemp.Text);
+            DictEvents.Add("dav", this.textBoxDav.Text);
+            DictEvents.Add("vla", this.textBoxVla.Text);
+            DictEvents.Add("obl", this.textBoxObl.Text);
+            DictEvents.Add("masa", this.textBoxMassa.Text);
+            DictEvents.Add("naprav", this.comboBoxCourse.Text);
+            DictEvents.Add("speed", this.textBoxSpeed.Text);
+
+            return DictEvents;
+        }
     }
 }

@@ -18,55 +18,47 @@ namespace InterfaceFoSimulator
 
     public partial class AddEvent : Form
     {
+        public bool itsAllOk;
+
         public AddEvent()
         {
             InitializeComponent();
 
-
-            // заполения списка событий
-            List<String> listEv = new List<string>();
-            listEv.Add("Отказ левого двигателя");
-            listEv.Add("Отказ правого двигателя");
-            listEv.Add("Отказ системы управления");
-            listEv.Add("Отказ системы охлаждения двигателей");
-            listEv.Add("Отказ срабатываня шасси");
-            listEv.Add("Турбулентность");
-            listEv.Add("Отказ датчика высоты");
-            listEv.Add("Отказ датчика скорости");
-            listEv.Add("Терорист на самолете");
-            SetListEvents(listEv);
-                        
-            // заполнение списка факторов
-            List<String> listFac = new List<string>();
-            listFac.Add("Время (мин)");
-            listFac.Add("Высота (м)");
-            listFac.Add("Далность (км)");
-            SetListFactors(listFac);
-
-            // заполнение списка умов
-            List<String> listUm = new List<string>();
-            listUm.Add("и");
-            listUm.Add("или");
-            //listUm.Add("не");
-            SetListYmov(listUm);
-            
+            itsAllOk = false;
+            SetAllData();
 
         }
 
-        public void SetListEvents(List<String> list)
+        public void SetAllData()
+        {
+            Container ContainerOfData = new Container();
+
+            SetListEvents(ContainerOfData.GetListEvents());
+            SetListFactors(ContainerOfData.GetListFactors());
+            SetListCondition(ContainerOfData.GetListCondition());
+            SetListOp(ContainerOfData.GetListOp());
+
+        }
+
+        private void SetListEvents(List<String> list)
         {
             for (int i = 0; i < list.Count; i++)
                 this.ListOfEvents.Items.Add(list[i]);
         }
-        public void SetListFactors(List<String> list)
+        private void SetListFactors(List<String> list)
         {
             for (int i = 0; i < list.Count; i++)
                 this.Column1.Items.Add(list[i]);
         }
-        public void SetListYmov(List<String> list)
+        private void SetListCondition(List<String> list)
         {
             for (int i = 0; i < list.Count; i++)
                 this.Column3.Items.Add(list[i]);
+        }
+        private void SetListOp(List<String> list)
+        {
+            for (int i = 0; i < list.Count; i++)
+                this.Column4.Items.Add(list[i]);
         }
 
 
@@ -92,9 +84,31 @@ namespace InterfaceFoSimulator
 
         private void OKbutton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            // проверка на пустые поля
+            try
+            {
+                int k = 0;
+                for (int i = 0; i < this.dataGridView1.RowCount - 1; i++)
+                {
+                    if (this.dataGridView1["Column1", i].Value.ToString() == ""
+                        || this.dataGridView1["Column2", i].Value.ToString() == ""
+                        || this.dataGridView1["Column4", i].Value.ToString() == "") k++;
+                }
+
+                if (this.ListOfEvents.Text == "" || k != 0 || this.dataGridView1.RowCount < 2)
+                    MessageBox.Show("Заполните все данные!");
+                else
+                {
+                    this.Close();
+                    itsAllOk = true;
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Заполните все данные!");
+            }
         }
 
-             
+       
     }
 }

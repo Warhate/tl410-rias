@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceFoSimulator", "InterfaceFoSimulator\InterfaceFoSimulator.csproj", "{DB6A4E58-A4B1-4D86-A211-634B9E86FCD3}"
 EndProject
 Global

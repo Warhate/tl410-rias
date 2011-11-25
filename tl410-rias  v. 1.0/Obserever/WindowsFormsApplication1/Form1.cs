@@ -62,7 +62,7 @@ namespace WindowsFormsApplication1
             foreach(var par in _manager.State.Parameters)
             {
 
-                temp.Add(par.Key, _rnd.Next(0, 3).ToString());
+                temp.Add(par.Key, _rnd.Next(0, 200).ToString());
 
                
             }

@@ -8,38 +8,36 @@ namespace Conditioner
     class Parser
     {
         private String conditions;
-        private int condtionsNesting;
-        private int currentNesting = 0;
-        private int[][] subMass;
-        //private string [][] parsedConditions;
-        private List<string> findedCondions = new List<string>();
-        private Dictionary<string, string[][]> parsedConditions = new Dictionary<string, string[][]>();
+        private string[,] parsedConditions;
+        private List<string> findedConditions = new List<string>();
 
         public Parser(string conditions)
         {
             this.conditions = conditions; //получаем строку условий
             parseConditions();            //парсим строку
-
-
-            findConditions();
         }
-        public Parser()
-        {
-        }
+
         private void parseConditions()
         {
+            findConditions();
 
-            for (int i = 0; i < conditions.Length; i++)
+            parsedConditions = new string[findedConditions.Count, 3];
+            int i = 0;
+            foreach (string subCondition in findedConditions)
             {
-                /*switch (conditions[i])
+                if ((!subCondition.Equals("&")) && (!subCondition.Equals("|")))
                 {
-                    case '(': 
-                        currentNesting++;
-                        break;
-                    case 
-                }*/
-            }
+                    parsedConditions[i, 0] = findVeriable(subCondition);
+                    parsedConditions[i, 1] = findAction(subCondition);
+                    parsedConditions[i, 2] = findValue(subCondition);
+                }
+                else
+                {
+                    parsedConditions[i, 0] = subCondition;
+                }
 
+                i++;
+            }
         }
 
         private void findConditions()
@@ -59,56 +57,72 @@ namespace Conditioner
                 {
                     if (conditions[i - 1] != ')')          // если встретили закрывающую скобку и перед ней нету еще 1, то берем
                     {                                      // рание сохранненную позицую и делаем сабстринг, таким образом занося 
-                        findedCondions.Add(conditions.Substring(startPosSub + 1, i - startPosSub - 1).ToString());     // условие в список
+                        findedConditions.Add(conditions.Substring(startPosSub + 1, i - startPosSub - 1).ToString());     // условие в список
                     }
                 }
                 if ((conditions[i] == '|') || (conditions[i] == '&'))  // если встретили один из знаков проверяем нет ли перед ним такого
                 {                                                      // же знака, если нету то сохраняем его как условие
                     if ((conditions[i - 1] != '|') && (conditions[i - 1] != '&'))
                     {
-                        findedCondions.Add(conditions.Substring(i, 1));
+                        findedConditions.Add(conditions.Substring(i, 1));
                     }
-                }/*
-                if (conditions[i] == '=')
-                {
-
                 }
-                if (conditions[i] == '!')
-                {
-
-                }
-                if ((conditions[i] == '<') || (conditions[i] == '>'))
-                {
-
-                }
-                else 
-                {
- 
-                }*/
             }
 
         }
 
-        public string findVeriable(string expression)
+        public string findVeriable(string expression) // метод отввечающий за поиск переменной в строке
         {
             for (int i = 0; i < expression.Length; i++)
             {
-                if ((expression[i + 1] == '>') && (expression[i + 1] == '=') && (expression[i + 1] == '<'))
+                if ((expression[i + 1] == '>') && (expression[i + 1] == '=') && (expression[i + 1] == '<') && (expression[i + 1] == '!'))
                 {
-                    return expression.Substring(0, i);
+                    return expression.Substring(0, i + 1);
                 }
             }
+
             return "Veriable Not Found";
         }
-        public string findAction(string expression)
+
+        public string findAction(string expression) // метод отвечающий за поиск логического действия в строке
         {
-            return "";
- 
+            for (int i = 0; i < expression.Length; i++)
+            {
+                if ((expression[i] == '>') && (expression[i] == '=') && (expression[i] == '<') && (expression[i] == '!'))
+                {
+                    if (expression[i + 1] == '=')
+                    {
+                        return expression.Substring(i, 2);
+                    }
+                    else
+                    {
+                        return expression.Substring(i, 1);
+                    }
+                }
+            }
+
+            return "Action Not Found";
         }
 
-        public List<string> getList()
+        public string findValue(string expression) //метод отвечающий за поиск значения парменной в строке
         {
-            return findedCondions;
+            for (int i = 0; i < expression.Length; i++)
+            {
+                if ((expression[i] == '>') && (expression[i] == '=') && (expression[i + 1] == '<'))
+                {
+                    if (expression[i + 1] != '=')
+                    {
+                        return expression.Substring(i + 1, expression.Length - i);
+                    }
+                }
+            }
+
+            return "Value Not Found";
+        }
+
+        public string[,] getParsedConditions()
+        {
+            return parsedConditions;
 
         }
     }

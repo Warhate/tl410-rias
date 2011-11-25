@@ -23,16 +23,20 @@ namespace Conditioner
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string res="";
+            //string res="string>=5";
+            /*
             Parser pr = new Parser("(((hight>3)&&(time==15))||(distance<45))");
             List<string> li;
-            li = pr.getList();
+            li = pr.getParsedConditions();
             foreach (string str in li)
             {
                 res += str + @"
 ";
-            }
-            textBox2.Text = res;
+            }*/
+
+            //textBox2.Text = res.Substring(0,1);
+            EventExecutioner event1 = new EventExecutioner(textBox1.Text);
+            textBox2.Text = event1.checkEventState().ToString();
         }
 
         private void label2_Click(object sender, EventArgs e)

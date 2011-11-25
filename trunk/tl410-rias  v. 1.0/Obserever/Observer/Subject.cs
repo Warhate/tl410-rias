@@ -9,30 +9,41 @@ namespace Observer
     {
         private List<Observer> _observers = new List<Observer>();
 
+        /// <summary>
+        /// Прикрипление события к прослушке
+        /// </summary>
+        /// <param name="observer"></param>
         public void Attach(Observer observer)
         {
             _observers.Add(observer);
         
         }
 
+        /// <summary>
+        /// Отключение события от наблюдения
+        /// </summary>
+        /// <param name="observer"></param>
         public void Dettach(Observer observer)
         {
             _observers.Remove(observer);
         
         }
 
+        /// <summary>
+        /// Обновление всех подключеных событий
+        /// </summary>
         public void Notify()
         {
             foreach (Observer obs in _observers)
             {
-
                 obs.Update();
-            }
-        
+            }      
         }
-
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     public enum EqualState
     {
         /// <summary>
@@ -62,29 +73,15 @@ namespace Observer
     /// </summary>
     public class State:Subject
     {
-        /// <summary>
-        /// Список параметров
-        /// </summary>
-        private SortedList<String, String> _parameters;
-
-
-
-
         public State()
         {
             Parameters = new SortedList<string, string>();
-
         }
 
         /// <summary>
         /// Список параметров
         /// </summary>
-        public SortedList<string, string> Parameters
-        {
-            get { return _parameters; }
-            set { _parameters = value; }
-        }
-
+        public SortedList<string, string> Parameters { get; set; }
 
         /// <summary>
         /// Добавляет параметр и его значение
@@ -94,7 +91,6 @@ namespace Observer
         /// <returns>Успешность добавления</returns>
         public bool AddParam(String name, String value)
         {
-
             if(Parameters.ContainsKey(name))
             {
                 return false;
@@ -103,7 +99,6 @@ namespace Observer
             Parameters.Add(name, value);
 
             return true;
-
         }
 
         public bool AddParam(String name, int value)
@@ -116,7 +111,6 @@ namespace Observer
             return AddParam(name,value.ToString());
         }
 
-
         /// <summary>
         /// Сравнивает значение со значением состояния
         /// </summary>
@@ -125,14 +119,41 @@ namespace Observer
         /// <returns>Истина если ровно</returns>
         public EqualState EqualParam(String name, String value)
         {
-            if (Parameters.ContainsKey(name))
+            try
             {
-                if(Parameters[name]==value)
+                var digitalValue = Convert.ToSingle(value);
+
+                if (Parameters.ContainsKey(name))
                 {
-                    return EqualState.Equally;
+                    var paramValue = Convert.ToSingle(Parameters[name]);
+
+                    if ((paramValue - digitalValue) < digitalValue*.01f&&
+                        (paramValue - digitalValue) > digitalValue * -.01f)
+                    {
+                        return EqualState.Equally;
+                    }
+
+                    if ((paramValue - digitalValue) < 0)
+                    {
+                        return EqualState.Over;
+                    }
+
+                    if ((paramValue - digitalValue) > 0)
+                    {
+                        return EqualState.Under;
+                    }
                 }
             }
-
+            catch
+            {
+                if (Parameters.ContainsKey(name))
+                {
+                    if (Parameters[name] == value)
+                    {
+                        return EqualState.Equally;
+                    }
+                }
+            }
             return EqualState.NotEqually;
         }
 
@@ -147,7 +168,6 @@ namespace Observer
         {
            return EqualParam(name, value.ToString());
         }
-
 
         /// <summary>
         /// Изменяет значение параметра
@@ -164,20 +184,6 @@ namespace Observer
             }
 
             return false;
-
         }
-
-
-
-
-
-
-
-
-
-
-
-    }
-
-    
+    }   
 }

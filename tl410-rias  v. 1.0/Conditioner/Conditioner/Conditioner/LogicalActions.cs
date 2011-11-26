@@ -9,7 +9,8 @@ namespace Conditioner
     {
         public static bool moreThen(double permitValue, double resValue)
         {
-            return permitValue < resValue;
+            bool res = permitValue < resValue;
+            return res;
         }
         public static bool lessThen(double permitValue, double resValue)
         {

@@ -7,3 +7,25 @@ C:\Users\Byakuya\documents\visual studio 2010\Projects\Conditioner\Conditioner\o
 C:\Users\Byakuya\documents\visual studio 2010\Projects\Conditioner\Conditioner\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Users\Byakuya\documents\visual studio 2010\Projects\Conditioner\Conditioner\obj\x86\Debug\Conditioner.exe
 C:\Users\Byakuya\documents\visual studio 2010\Projects\Conditioner\Conditioner\obj\x86\Debug\Conditioner.pdb
+H:\Conditioner\Conditioner\obj\x86\Debug\Conditioner.exe
+H:\Conditioner\Conditioner\obj\x86\Debug\Conditioner.pdb
+H:\Conditioner\Conditioner\bin\Debug\Conditioner.exe
+H:\Conditioner\Conditioner\bin\Debug\Conditioner.pdb
+H:\Conditioner\Conditioner\obj\x86\Debug\ResolveAssemblyReference.cache
+H:\Conditioner\Conditioner\obj\x86\Debug\Conditioner.Form1.resources
+H:\Conditioner\Conditioner\obj\x86\Debug\Conditioner.Properties.Resources.resources
+H:\Conditioner\Conditioner\obj\x86\Debug\GenerateResource.read.1.tlog
+H:\Conditioner\Conditioner\obj\x86\Debug\GenerateResource.write.1.tlog
+F:\Conditioner\Conditioner\obj\x86\Debug\Conditioner.exe
+F:\Conditioner\Conditioner\obj\x86\Debug\Conditioner.pdb
+C:\Users\Byakuya\Desktop\Conditioner\Conditioner\bin\Debug\Conditioner.exe
+C:\Users\Byakuya\Desktop\Conditioner\Conditioner\bin\Debug\Conditioner.pdb
+C:\Users\Byakuya\Desktop\Conditioner\Conditioner\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Byakuya\Desktop\Conditioner\Conditioner\obj\x86\Debug\Conditioner.Form1.resources
+C:\Users\Byakuya\Desktop\Conditioner\Conditioner\obj\x86\Debug\Conditioner.Properties.Resources.resources
+C:\Users\Byakuya\Desktop\Conditioner\Conditioner\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Byakuya\Desktop\Conditioner\Conditioner\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Byakuya\Desktop\Conditioner\Conditioner\obj\x86\Debug\Conditioner.exe
+C:\Users\Byakuya\Desktop\Conditioner\Conditioner\obj\x86\Debug\Conditioner.pdb
+D:\свн\1\tl410-rias  v. 1.0\Conditioner\Conditioner\Conditioner\obj\x86\Debug\Conditioner.exe
+D:\свн\1\tl410-rias  v. 1.0\Conditioner\Conditioner\Conditioner\obj\x86\Debug\Conditioner.pdb

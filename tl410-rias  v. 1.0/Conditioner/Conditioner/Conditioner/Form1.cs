@@ -35,8 +35,12 @@ namespace Conditioner
             }*/
 
             //textBox2.Text = res.Substring(0,1);
-            EventExecutioner event1 = new EventExecutioner(textBox1.Text);
-            textBox2.Text = event1.checkEventState().ToString();
+            int curHight = Convert.ToInt32(textBox3.Text);
+            int curDistance = Convert.ToInt32(textBox4.Text);
+            int curTime = Convert.ToInt32(textBox5.Text);
+
+            EventExecutioner event1 = new EventExecutioner(textBox1.Text, curHight, curTime, curDistance);
+            textBox2.Text = event1.executeEvent().ToString();
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -45,6 +49,16 @@ namespace Conditioner
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }

@@ -18,8 +18,11 @@ namespace Conditioner
         private string[] subConditionsResult;
         private string[,] parsedConditions;
         
-        public EventExecutioner(string eventCondition)
+        public EventExecutioner(string eventCondition, int cur_hight, int cur_time, int cur_distance)
         {
+            this.cur_hight = cur_hight;
+            this.cur_distance = cur_distance;
+            this.cur_time = cur_time;
             Parser _parser = new Parser(eventCondition);
             this.parsedConditions = _parser.getParsedConditions();
         }
@@ -29,13 +32,15 @@ namespace Conditioner
 
             return false;
         }
-        private bool executeEvent()
+        public bool executeEvent()
         {
+            subConditionsResult = new string[parsedConditions.GetLength(0)];
             for(int i=0;i<parsedConditions.GetLength(0);i++)
             {
-                if ((parsedConditions[i, 0] != "&") && (parsedConditions[i, 0] != "|"))
+                if ((!parsedConditions[i, 0].Equals("&")) && (!parsedConditions[i, 0].Equals("|")))
                 {
-                    subConditionsResult[i] = executeSubCondition(getVariableCurrentValue(parsedConditions[i, 0]), Convert.ToInt32(parsedConditions[i, 2]), parsedConditions[i, 1]).ToString();
+                    string res =parsedConditions[i, 1].ToString();
+                    subConditionsResult[i] = Convert.ToString(executeSubCondition(getVariableCurrentValue(parsedConditions[i, 0]), Convert.ToInt32(parsedConditions[i, 2]), parsedConditions[i, 1].ToString()));
                 }
                 else
                 {
@@ -83,20 +88,21 @@ namespace Conditioner
         }
         private bool executeSubCondition(int currentValue, int permitedValue, string actionType)
         {
+            bool res;
             switch (actionType)
             {
-                case ">": 
-                    return LogicalActions.moreThen(currentValue, permitedValue);
+                case ">":
+                    return LogicalActions.moreThen(permitedValue, currentValue);
                 case ">=" :
-                    return LogicalActions.moreEqThen(currentValue, permitedValue);
+                    return LogicalActions.moreEqThen(permitedValue, currentValue);
                 case "<":
-                    return LogicalActions.lessThen(currentValue, permitedValue);
+                    return LogicalActions.lessThen(permitedValue, currentValue);
                 case "<=":
-                    return LogicalActions.lessEqThen(currentValue, permitedValue);
+                    return LogicalActions.lessEqThen(permitedValue, currentValue);
                 case "==":
-                    return LogicalActions.equalent(currentValue, permitedValue);
+                    return LogicalActions.equalent(permitedValue, currentValue);
                 case "!=":
-                    return LogicalActions.notEqualent(currentValue, permitedValue);
+                    return LogicalActions.notEqualent(permitedValue, currentValue);
                 default:
                     return false;
             }

@@ -75,12 +75,15 @@ namespace Conditioner
         {
             for (int i = 0; i < expression.Length; i++)
             {
-                if ((expression[i + 1] == '>') && (expression[i + 1] == '=') && (expression[i + 1] == '<') && (expression[i + 1] == '!'))
+                if(i+1<expression.Length)
+                {
+                    if ((expression[i + 1] == '>') || (expression[i + 1] == '=') || (expression[i + 1] == '<') || (expression[i + 1] == '!'))
                 {
                     return expression.Substring(0, i + 1);
                 }
+                }
             }
-
+            //hight>5
             return "Veriable Not Found";
         }
 
@@ -88,15 +91,18 @@ namespace Conditioner
         {
             for (int i = 0; i < expression.Length; i++)
             {
-                if ((expression[i] == '>') && (expression[i] == '=') && (expression[i] == '<') && (expression[i] == '!'))
+                if (i + 1<expression.Length)
                 {
-                    if (expression[i + 1] == '=')
+                    if ((expression[i] == '>') || (expression[i] == '=') || (expression[i] == '<') || (expression[i] == '!'))
                     {
-                        return expression.Substring(i, 2);
-                    }
-                    else
-                    {
-                        return expression.Substring(i, 1);
+                        if (expression[i + 1] == '=')
+                        {
+                            return expression.Substring(i, 2);
+                        }
+                        else
+                        {
+                            return expression.Substring(i, 1);
+                        }
                     }
                 }
             }
@@ -108,11 +114,14 @@ namespace Conditioner
         {
             for (int i = 0; i < expression.Length; i++)
             {
-                if ((expression[i] == '>') && (expression[i] == '=') && (expression[i + 1] == '<'))
+                if (i + 1<expression.Length)
                 {
-                    if (expression[i + 1] != '=')
+                    if ((expression[i] == '>') || (expression[i] == '=') || (expression[i + 1] == '<'))
                     {
-                        return expression.Substring(i + 1, expression.Length - i);
+                        if (expression[i + 1] != '=')
+                        {
+                            return expression.Substring(i + 1, expression.Length - i-1);
+                        }
                     }
                 }
             }

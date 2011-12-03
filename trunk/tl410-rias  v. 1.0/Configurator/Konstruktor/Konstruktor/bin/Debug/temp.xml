@@ -1,4 +1,30 @@
-<?xml version="1.0" encoding="WINDOWS-1251"?>
-<actions>
-
-</actions>
+<?xml version="1.0" encoding="windows-1251"?>
+<scenario>
+  <name_scenario>temp</name_scenario>
+  <actions>
+    <action>
+      <name>test</name>
+      <script>test</script>
+      <is_single>true</is_single>
+      <interval>15</interval>
+    </action>
+    <action>
+      <name>test2</name>
+      <script>test</script>
+      <is_single>false</is_single>
+      <interval>20</interval>
+    </action>
+    <action>
+      <name>text</name>
+      <script>df</script>
+      <is_single>False</is_single>
+      <interval>60</interval>
+    </action>
+    <action>
+      <name>text</name>
+      <script>df</script>
+      <is_single>false</is_single>
+      <interval>60</interval>
+    </action>
+  </actions>
+</scenario>

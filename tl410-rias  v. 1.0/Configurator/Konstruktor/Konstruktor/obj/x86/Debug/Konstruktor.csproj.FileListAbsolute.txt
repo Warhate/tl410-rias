@@ -16,3 +16,12 @@ C:\Users\Макс\Desktop\Konstruktor\Konstruktor\obj\x86\Debug\Konstruktor.Form
 C:\Users\Макс\Desktop\Konstruktor\Konstruktor\obj\x86\Debug\Konstruktor.Properties.Resources.resources
 C:\Users\Макс\Desktop\Konstruktor\Konstruktor\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Users\Макс\Desktop\Konstruktor\Konstruktor\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Andrey\пари\хаменко\tl410-rias  v. 1.0\Konstruktor\Konstruktor\obj\x86\Debug\Konstruktor.exe
+D:\Andrey\пари\хаменко\tl410-rias  v. 1.0\Konstruktor\Konstruktor\obj\x86\Debug\Konstruktor.pdb
+D:\Andrey\пари\хаменко\tl410-rias  v. 1.0\Konstruktor\Konstruktor\bin\Debug\Konstruktor.exe
+D:\Andrey\пари\хаменко\tl410-rias  v. 1.0\Konstruktor\Konstruktor\bin\Debug\Konstruktor.pdb
+D:\Andrey\пари\хаменко\tl410-rias  v. 1.0\Konstruktor\Konstruktor\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Andrey\пари\хаменко\tl410-rias  v. 1.0\Konstruktor\Konstruktor\obj\x86\Debug\Konstruktor.Form1.resources
+D:\Andrey\пари\хаменко\tl410-rias  v. 1.0\Konstruktor\Konstruktor\obj\x86\Debug\Konstruktor.Properties.Resources.resources
+D:\Andrey\пари\хаменко\tl410-rias  v. 1.0\Konstruktor\Konstruktor\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Andrey\пари\хаменко\tl410-rias  v. 1.0\Konstruktor\Konstruktor\obj\x86\Debug\GenerateResource.write.1.tlog

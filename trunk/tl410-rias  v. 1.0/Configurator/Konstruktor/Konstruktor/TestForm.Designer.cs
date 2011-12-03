@@ -1,6 +1,6 @@
 ﻿namespace Konstruktor
 {
-    partial class Form1
+    partial class TestForm
     {
         /// <summary>
         /// Требуется переменная конструктора.

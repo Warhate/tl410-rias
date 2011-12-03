@@ -9,19 +9,22 @@ using System.Windows.Forms;
 
 namespace Konstruktor
 {
-    public partial class Form1 : Form
+    public partial class TestForm : Form
     {
-        public Form1()
+        public TestForm()
         {
             InitializeComponent();
         }
 
         XML xml = new XML(Application.StartupPath);
+        Scenario scen = new Scenario(Application.StartupPath);
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string[] mas = xml.load_settings(Application.StartupPath + @"\test.xml");
-            xml.add_actions(Application.StartupPath + @"\" + textBox1.Text + ".xml", mas);
+            Scenarios scenario = scen.Get_Scenario("temp.xml");
+            scen.New_Scenario(textBox1.Text+".xml", scenario);
+            scen.Edit_Scenario("тест2.xml", scenario);
+            scen.test();
             MessageBox.Show("Виконання завершено!!!", "Повідомлення");
         }
     }

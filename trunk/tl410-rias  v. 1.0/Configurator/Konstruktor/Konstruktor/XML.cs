@@ -17,7 +17,7 @@ namespace Konstruktor
             PATH = path;
         }
 
-        protected XDocument LoadDocument(string filename)
+        protected XDocument LoadDocument(string filename)//Завантажуємо документ з ім'ям filename в обєкт XDocument
         {
             XmlDocument docxml = new XmlDocument();
             docxml.Load(filename);
@@ -26,14 +26,14 @@ namespace Konstruktor
             return xDoc;
         }
 
-        protected string GetScenarioName(XDocument doc)
+        protected string GetScenarioName(XDocument doc)//Дістаємо зі сценарію у форматі XDocument ім'я сценарію 
         {
             string scen_name;
             scen_name = doc.Element("scenario").Element("name_scenario").Value;
             return scen_name;
         }
 
-        protected Events[] GetScenarioActions(XDocument doc)
+        protected Events[] GetScenarioEvents(XDocument doc)//Дістаємо зі сценарію у форматі XDocument масив подій Events[] events
         {
             int count = doc.Element("scenario").Element("actions").Elements().Count();
             int index = 0;
@@ -49,7 +49,7 @@ namespace Konstruktor
             return events;
         }
 
-        protected Events GetScenarioAction(XDocument doc, string name_event)
+        protected Events GetScenarioEvent(XDocument doc, string name_event)//Дістаємо зі сценарію у форматі XDocument одну подію з ім'ям name_event
         {
             Events myevent = new Events();
             IEnumerable<XElement> elements =
@@ -64,13 +64,13 @@ namespace Konstruktor
             return myevent;
         }
 
-        protected XDocument EditNameScenario(XDocument doc, string name_scenario)
+        protected XDocument EditNameScenario(XDocument doc, string name_scenario)//Змінюємо ім'я сценарію на name_scenario
         {
             doc.Element("scenario").Element("name_scenario").Value = name_scenario;
             return doc;
         }
 
-        protected XDocument EditEvent(XDocument doc, string name_event, Events my_event)
+        protected XDocument EditEvent(XDocument doc, string name_event, Events my_event)//Змінюємо подію з ім'ям name_event на my_event
         {
             IEnumerable<XElement> elements =
                 from el in doc.Element("scenario").Element("actions").Elements()
@@ -87,7 +87,7 @@ namespace Konstruktor
             return doc;
         }
 
-        protected XDocument EditEvents(XDocument doc, Events[] my_events)
+        protected XDocument EditEvents(XDocument doc, Events[] my_events)//Змінюємо масив подій на масив Events[] my_events
         {
             doc.Element("scenario").Element("actions").Elements().Remove();
             for(int i = 0; i < my_events.Length; i++ )
@@ -98,7 +98,7 @@ namespace Konstruktor
             return doc;
         }
 
-        protected XDocument DeleteEvent(XDocument doc, string name_event)
+        protected XDocument DeleteEvent(XDocument doc, string name_event)//Видаляємо одну подію зі з ім'ям name_event 
         {
             IEnumerable<XElement> elements =
                 from el in doc.Element("scenario").Element("actions").Elements()
@@ -112,18 +112,18 @@ namespace Konstruktor
             return doc;
         }
 
-        protected void SaveScenario(XDocument doc, string filename)
+        protected void SaveScenario(XDocument doc, string filename)//Зберігаємо сценарій в файл з ім'ям filename
         {
             doc.Save(filename);
         }
 
-        protected XDocument AddEventToScenario(XDocument doc, XElement elem)
+        protected XDocument AddEventToScenario(XDocument doc, XElement elem)//Додаємо в кінець сценарію ще одну подію в форматі XElement elem
         {
             doc.Element("scenario").Element("actions").Add(elem);
             return doc;
         }
 
-        protected XElement EventToElement(Events my_event)
+        protected XElement EventToElement(Events my_event)//Конвертуємо подію з формату Events в формат XElement
         {
             XElement elem = new XElement("action");
             elem.Add(new XElement("name", my_event.Name));
@@ -133,7 +133,7 @@ namespace Konstruktor
             return elem;
         }
 
-        protected XDocument NewScenario(string scenario_name)
+        protected XDocument NewScenario(string scenario_name)//Створюємо шаблон нового порожньго сценарію з ім'ям сценарыю scenario_name
         {
             XDocument doc = new XDocument(
                 new XElement("scenario",
@@ -144,7 +144,7 @@ namespace Konstruktor
             return doc;
         }
 
-        protected Events ElementToEvent(XElement elem)
+        protected Events ElementToEvent(XElement elem)//Конвертуємо подію з формату XElement в формат  Events
         {
             Events myevent = new Events();
             myevent.Name = elem.Element("name").Value;
